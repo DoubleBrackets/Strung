@@ -26,6 +26,17 @@
             ],
             "bindings": [
                 {
+                    "name": "",
+                    "id": "5eed58fe-eee3-4147-bd6d-ea408aa680a4",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P1Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
                     "id": "54f7a98e-61cb-4100-80f9-f0f437cc9150",
                     "path": "2DVector",
@@ -79,6 +90,28 @@
                     "action": "P1Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d28124c2-a35b-49a3-9a50-4928872c5e89",
+                    "path": "<HID::Microntek              USB Joystick          >/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P1Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18618c0d-fecb-4703-a61b-8c7deff302b1",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P2Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "2D Vector",

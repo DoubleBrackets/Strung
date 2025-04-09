@@ -92,19 +92,23 @@ namespace String
         {
             Vector2 direction = (p2 - p1).normalized;
             float distance = Vector2.Distance(p1, p2);
-            RaycastHit2D hit = Physics2D.Raycast(p1, direction, distance, collisionLayer);
-            if (hit.collider != null)
-            {
-                var collidable = hit.collider.GetComponentInParent<IStringCollidable>();
-                if (collidable != null)
-                {
-                    var data = new StringHitData
-                    {
-                        hitDirection = midpointVelocity.normalized
-                    };
-                    collidable.OnStringHit(data);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(p1, direction, distance, collisionLayer);
 
-                    onStringHit?.Invoke();
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider != null)
+                {
+                    var collidable = hit.collider.GetComponentInParent<IStringCollidable>();
+                    if (collidable != null)
+                    {
+                        var data = new StringHitData
+                        {
+                            hitDirection = midpointVelocity.normalized
+                        };
+                        collidable.OnStringHit(data);
+
+                        onStringHit?.Invoke();
+                    }
                 }
             }
         }
