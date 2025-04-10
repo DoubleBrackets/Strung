@@ -1,12 +1,14 @@
 using UnityEngine;
+using ProtagScripts;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    Vector3 direction;
+    Vector3 velocity;
     
     [SerializeField]
     private float speed = 10f;
-    
+    GameObject player1Object;
+    GameObject player2Object;
     private Transform player1;
     private Transform player2;
     Rigidbody2D rb2d;
@@ -14,13 +16,13 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject player1Object = GameObject.Find("Player1");
+        player1Object = GameObject.Find("Player1");
         player1 = player1Object.transform.Find("Body");
         
-        GameObject player2Object = GameObject.Find("Player2");
+        player2Object = GameObject.Find("Player2");
         player2 = player2Object.transform.Find("Body");
 
-        direction = Vector3.zero;
+        velocity = Vector3.zero;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -37,21 +39,39 @@ public class EnemyBehavior : MonoBehaviour
         Vector3 posPlayer1 = player1.position;
         Vector3 posPlayer2 = player2.position;
         Vector3 pos = gameObject.transform.position;
+        Vector3 direction = Vector3.zero;
 
         Transform nearestPlayer = player1;
 
-        if ((posPlayer1 - pos).magnitude < (posPlayer2 - pos).magnitude)
+        bool defeatedPlayer1 = player1Object.GetComponent<Protag>().IsDefeated();
+        bool defeatedPlayer2 = player2Object.GetComponent<Protag>().IsDefeated();
+        
+        if (defeatedPlayer1 && defeatedPlayer2)
         {
-            nearestPlayer = player1;
+            Vector3 randomDirection = Random.onUnitSphere;
+        }
+        else if (defeatedPlayer1)
+        {
+            direction = posPlayer2 - pos;
+        }
+        else if (defeatedPlayer2)
+        {
+            direction = posPlayer1 - pos;
         }
         else
         {
-            nearestPlayer = player2;
+            if ((posPlayer1 - pos).magnitude < (posPlayer2 - pos).magnitude)
+            {
+                nearestPlayer = player1;
+            }
+            else
+            {
+                nearestPlayer = player2;
+            }
+            direction = nearestPlayer.position - pos;
         }
 
-        Vector3 target = nearestPlayer.position;
-        direction = Vector3.Lerp(direction, (target - pos).normalized, 1f/2f * Time.deltaTime);
-        // gameObject.transform.position += direction * speed * Time.deltaTime;
-        rb2d.linearVelocity = direction * speed;
+        velocity = Vector3.Lerp(velocity, direction.normalized, 1f/2f * Time.deltaTime);
+        rb2d.linearVelocity = velocity * speed;
     }
 }

@@ -14,6 +14,8 @@ namespace ProtagScripts
         public void SetInput(InputAction.CallbackContext context)
         {
             movementInput = context.ReadValue<Vector2>();
+            
+            if (gameObject.activeSelf == false) movementInput = Vector2.zero;
         }
     }
 }
