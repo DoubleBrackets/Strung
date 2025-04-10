@@ -1,5 +1,5 @@
-using UnityEngine;
 using ProtagScripts;
+using UnityEngine;
 
 public class ProtagCollision : MonoBehaviour
 {
@@ -9,12 +9,13 @@ public class ProtagCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // print(2);
-            Protag protag = gameObject.transform.parent.parent.gameObject.GetComponent<Protag>();
+            var protag = GetComponentInParent<Protag>();
             protag.SetDefeated(true);
         }
+
         if (collision.gameObject.CompareTag("Player"))
         {
-            Protag protag = collision.transform.parent.gameObject.GetComponent<Protag>();
+            var protag = collision.gameObject.GetComponentInParent<Protag>();
             if (protag.IsDefeated())
             {
                 // print(3);

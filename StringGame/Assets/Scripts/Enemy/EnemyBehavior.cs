@@ -1,33 +1,34 @@
-using UnityEngine;
 using ProtagScripts;
+using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    Vector3 velocity;
-    
     [SerializeField]
     private float speed = 10f;
-    GameObject player1Object;
-    GameObject player2Object;
-    private Transform player1;
-    private Transform player2;
-    Rigidbody2D rb2d;
+
+    public Transform protagA;
+
+    public Transform protagB;
+
+    private Vector3 velocity;
+
+    private Rigidbody2D rb2d;
+
+    private Protag protagAScript;
+    private Protag protagBScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        player1Object = GameObject.Find("Player1");
-        player1 = player1Object.transform.Find("Body");
-        
-        player2Object = GameObject.Find("Player2");
-        player2 = player2Object.transform.Find("Body");
-
         velocity = Vector3.zero;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+
+        protagAScript = protagA.GetComponentInParent<Protag>();
+        protagBScript = protagB.GetComponentInParent<Protag>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // DONE:
         // Find nearest player
@@ -36,16 +37,16 @@ public class EnemyBehavior : MonoBehaviour
         // WIP:
         // If collision, destroy player
 
-        Vector3 posPlayer1 = player1.position;
-        Vector3 posPlayer2 = player2.position;
+        Vector3 posPlayer1 = protagA.position;
+        Vector3 posPlayer2 = protagB.position;
         Vector3 pos = gameObject.transform.position;
         Vector3 direction = Vector3.zero;
 
-        Transform nearestPlayer = player1;
+        Transform nearestPlayer = protagA;
 
-        bool defeatedPlayer1 = player1Object.GetComponent<Protag>().IsDefeated();
-        bool defeatedPlayer2 = player2Object.GetComponent<Protag>().IsDefeated();
-        
+        bool defeatedPlayer1 = protagAScript.IsDefeated();
+        bool defeatedPlayer2 = protagBScript.IsDefeated();
+
         if (defeatedPlayer1 && defeatedPlayer2)
         {
             Vector3 randomDirection = Random.onUnitSphere;
@@ -62,16 +63,17 @@ public class EnemyBehavior : MonoBehaviour
         {
             if ((posPlayer1 - pos).magnitude < (posPlayer2 - pos).magnitude)
             {
-                nearestPlayer = player1;
+                nearestPlayer = protagA;
             }
             else
             {
-                nearestPlayer = player2;
+                nearestPlayer = protagB;
             }
+
             direction = nearestPlayer.position - pos;
         }
 
-        velocity = Vector3.Lerp(velocity, direction.normalized, 1f/2f * Time.deltaTime);
+        velocity = Vector3.Lerp(velocity, direction.normalized, 1f / 2f * Time.deltaTime);
         rb2d.linearVelocity = velocity * speed;
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace ProtagScripts
@@ -8,15 +9,22 @@ namespace ProtagScripts
     /// </summary>
     public class Protag : MonoBehaviour
     {
+        private static int remainingPlayers;
 
         [Header("Depends")]
 
         [SerializeField]
         private Transform stringPoint;
 
+        [Header("Events")]
+
+        [SerializeField]
+        private UnityEvent OnDefeated;
+
+        [SerializeField]
+        private UnityEvent OnRevived;
+
         public Vector3 StringPosition => stringPoint.position;
-        
-        private static int remainingPlayers;
         private bool active;
 
         public void Start()
@@ -29,15 +37,13 @@ namespace ProtagScripts
         {
             return active == false;
         }
+
         public void SetDefeated(bool defeated)
         {
-            if (active == true && defeated == true)
+            if (active && defeated)
             {
-
-                transform.Find("Input").gameObject.SetActive(false);
-                transform.Find("Body").Find("Sprite").gameObject.SetActive(false);
-                transform.Find("Body").Find("SpriteDisabled").gameObject.SetActive(true);
-                remainingPlayers -=1;
+                OnDefeated?.Invoke();
+                remainingPlayers -= 1;
                 active = false;
                 if (remainingPlayers <= 0)
                 {
@@ -47,16 +53,14 @@ namespace ProtagScripts
             else if (active == false && defeated == false)
             {
                 active = true;
-                transform.Find("Input").gameObject.SetActive(true);
-                transform.Find("Body").Find("Sprite").gameObject.SetActive(true);
-                transform.Find("Body").Find("SpriteDisabled").gameObject.SetActive(false);
-                remainingPlayers +=1;
+                OnRevived?.Invoke();
+                remainingPlayers += 1;
             }
         }
+
         private void RestartScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        
     }
 }
