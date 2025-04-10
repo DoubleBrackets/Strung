@@ -16085,6 +16085,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1643870409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643870411}
+  - component: {fileID: 1643870410}
+  m_Layer: 0
+  m_Name: Rumble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1643870410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643870409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c680996b1ea80e44ad7f4ea9441bc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1643870411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643870409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657201305
 GameObject:
   m_ObjectHideFlags: 0
@@ -17022,6 +17066,34 @@ PrefabInstance:
       propertyPath: deadZoneDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f3845fd050c8624f9f8f85f1225c838, type: 2}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayRumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RumbleSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798419881113861619, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
+      propertyPath: onStringHit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17091,6 +17163,7 @@ SceneRoots:
   - {fileID: 368363989}
   - {fileID: 1439834748}
   - {fileID: 2033906710}
+  - {fileID: 1643870411}
   - {fileID: 1554571398}
   - {fileID: 619394802}
   - {fileID: 1438131463}
