@@ -16,13 +16,13 @@ namespace ProtagScripts
 
         public Vector3 StringPosition => stringPoint.position;
         
-        private static int remainingPlayers = 2;
+        private static int remainingPlayers;
         private bool active;
 
         public void Start()
         {
             active = true;
-            remainingPlayers == 2;
+            remainingPlayers = 2;
         }
 
         public bool IsDefeated()
