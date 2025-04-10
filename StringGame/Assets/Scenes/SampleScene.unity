@@ -6004,16 +6004,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnRevived.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: OnRevived.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 992343624}
     - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 992343624}
+      objectReference: {fileID: 11400000, guid: 9f3845fd050c8624f9f8f85f1225c838, type: 2}
     - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
-      value: SetEnabled
+      value: PlayRumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: RumbleSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5416162686311305728, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16979,13 +16995,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnRevived.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: OnRevived.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 992343624}
     - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
       propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 992343624}
+      objectReference: {fileID: 11400000, guid: 9f3845fd050c8624f9f8f85f1225c838, type: 2}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: PlayRumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnDefeated.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: RumbleSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333409899217683484, guid: 572e9b75fa0cf9f418f0945969e71520, type: 3}
+      propertyPath: OnRevived.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
