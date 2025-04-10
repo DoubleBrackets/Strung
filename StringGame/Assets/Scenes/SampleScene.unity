@@ -481,7 +481,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.07450981, g: 0.03529412, b: 0.03137255, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -16924,38 +16924,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.27464488
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].inSlope
-      value: 2.4718578
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].outSlope
-      value: 2.4718578
-      objectReference: {fileID: 0}
-    - target: {fileID: 993071439988010030, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].outWeight
-      value: 0.11111111
-      objectReference: {fileID: 0}
     - target: {fileID: 3422766187692379882, guid: 52a8868e68e65b448b45ac687de6f269, type: 3}
       propertyPath: m_Name
       value: String
