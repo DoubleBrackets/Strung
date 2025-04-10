@@ -7,8 +7,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     private float speed = 10f;
     
-    public Transform player1;
-    public Transform player2;
+    private Transform player1;
+    private Transform player2;
     Rigidbody2D rb2d;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
