@@ -21,12 +21,12 @@ public class EnemySpawner : MonoBehaviour
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0f)
         {
-            print(1);
+            // print(1);
             spawnTimer = spawnInterval;
             float chance = Random.Range(0f, 1f);
             if (chance <= spawnChance) {
                 
-                print(2);
+                // print(2);
                 Vector2 rectMin = new Vector2(-5f, -5f);
                 Vector2 rectMax = new Vector2(5f, 5f);
 
