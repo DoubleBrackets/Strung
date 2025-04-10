@@ -43,6 +43,8 @@ namespace String
         [SerializeField]
         private UnityEvent onStringHit;
 
+        private bool stringEnabled = true;
+
         private Vector2 midpoint;
         private Vector2 midpointVelocity;
 
@@ -63,7 +65,10 @@ namespace String
 
             UpdateStringVisuals(p1, p2);
 
-            StringRaycast(p1, p2);
+            if (stringEnabled)
+            {
+                StringRaycast(p1, p2);
+            }
         }
 
         private void OnDrawGizmos()
@@ -121,6 +126,14 @@ namespace String
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, p1);
             lineRenderer.SetPosition(1, p2);
+        }
+
+        public void SetEnabled(bool enabled)
+        {
+            lineRendererA.enabled = enabled;
+            lineRendererB.enabled = enabled;
+            centerPoint.gameObject.SetActive(enabled);
+            stringEnabled = enabled;
         }
     }
 }
