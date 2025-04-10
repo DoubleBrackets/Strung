@@ -34,9 +34,6 @@ public class EnemyBehavior : MonoBehaviour
         // Find nearest player
         // Run towards player
 
-        // WIP:
-        // If collision, destroy player
-
         Vector3 posPlayer1 = protagA.position;
         Vector3 posPlayer2 = protagB.position;
         Vector3 pos = gameObject.transform.position;
@@ -49,18 +46,22 @@ public class EnemyBehavior : MonoBehaviour
 
         if (defeatedPlayer1 && defeatedPlayer2)
         {
-            Vector3 randomDirection = Random.onUnitSphere;
+            // If both players are defeated move randomly while the scene resets
+            direction = Random.onUnitSphere;
         }
         else if (defeatedPlayer1)
         {
+            // If player 1 is defeated pick player 2
             direction = posPlayer2 - pos;
         }
         else if (defeatedPlayer2)
         {
+            // If player 2 is defeated pick player 1
             direction = posPlayer1 - pos;
         }
         else
         {
+            // If neither are defeated pick the closest
             if ((posPlayer1 - pos).magnitude < (posPlayer2 - pos).magnitude)
             {
                 nearestPlayer = protagA;
@@ -72,7 +73,7 @@ public class EnemyBehavior : MonoBehaviour
 
             direction = nearestPlayer.position - pos;
         }
-
+        
         velocity = Vector3.Lerp(velocity, direction.normalized, 1f / 2f * Time.deltaTime);
         rb2d.linearVelocity = velocity * speed;
     }

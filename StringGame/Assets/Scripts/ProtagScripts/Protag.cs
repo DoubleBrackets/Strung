@@ -47,7 +47,7 @@ namespace ProtagScripts
                 active = false;
                 if (remainingPlayers <= 0)
                 {
-                    Invoke(nameof(RestartScene), 2f);
+                    Invoke(nameof(RestartScene), 4f);
                 }
             }
             else if (active == false && defeated == false)
