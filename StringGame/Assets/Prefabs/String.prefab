@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenShakeSO: {fileID: 11400000, guid: f73101501bf931148819bd2710f74f76, type: 2}
   velocity: {x: 0, y: 1}
-  strength: 0.3
+  strength: 0.2
 --- !u!1001 &4562757690716766972
 PrefabInstance:
   m_ObjectHideFlags: 0
