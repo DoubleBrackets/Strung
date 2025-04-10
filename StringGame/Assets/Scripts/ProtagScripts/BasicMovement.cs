@@ -20,18 +20,18 @@ namespace ProtagScripts
         [SerializeField]
         private float accel;
 
+        [SerializeField]
+        private float defeatedSpeed;
+
         private bool canMove = true;
 
         private void Update()
         {
             Vector2 inputVector = input.MovementInput;
 
-            if (!canMove)
-            {
-                inputVector = Vector2.zero;
-            }
+            float desireSpeed = canMove ? speed : defeatedSpeed;
 
-            Vector2 targetVelocity = inputVector.normalized * speed;
+            Vector2 targetVelocity = inputVector.normalized * desireSpeed;
             Vector2 velocity = rb2d.linearVelocity;
 
             velocity = Vector2.MoveTowards(velocity, targetVelocity, accel * Time.deltaTime);

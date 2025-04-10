@@ -15131,8 +15131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 992021116147457857}
   input: {fileID: 2449065623721977262}
-  speed: 5
+  speed: 5.5
   accel: 40
+  defeatedSpeed: 1.3
 --- !u!1 &6201629650781894789
 GameObject:
   m_ObjectHideFlags: 0
