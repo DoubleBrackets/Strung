@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5333409899217683484}
   - component: {fileID: 4663221460560877799}
   - component: {fileID: 6481479489480529327}
+  - component: {fileID: 8277359351835403280}
   m_Layer: 0
   m_Name: Protag
   m_TagString: Player
@@ -217,6 +218,20 @@ MonoBehaviour:
   screenShakeSO: {fileID: 11400000, guid: f73101501bf931148819bd2710f74f76, type: 2}
   velocity: {x: 0, y: 1}
   strength: 0.2
+--- !u!114 &8277359351835403280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551803887140641234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076d935dd5e716d4c9bc74574132ad5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 992021116147457857}
+  particleSystem: {fileID: 7311274275715608483}
 --- !u!1 &1182451896698703466
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 2113506708104236008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.69, z: 0}
+  m_LocalPosition: {x: 0, y: 1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,7 +887,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1012,7 +1027,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -1070,7 +1085,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
@@ -1241,7 +1256,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 25
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -2953,7 +2968,7 @@ ParticleSystem:
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15305,6 +15320,7 @@ Transform:
   - {fileID: 5335473603097333289}
   - {fileID: 3576406361508570894}
   - {fileID: 2763716402707413015}
+  - {fileID: 5367725228867096468}
   - {fileID: 5897963308705512636}
   m_Father: {fileID: 4534360543195150410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15396,4 +15412,71 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5153329770208736503, guid: 4f70c0bc6692c3b46b990aa29dba2c3f, type: 3}
   m_PrefabInstance: {fileID: 3245114951298055277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9193669403119693694
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5416162686311305728}
+    m_Modifications:
+    - target: {fileID: 867918512018051848, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_Name
+      value: WalkParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+--- !u!4 &5367725228867096468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3885344493915152618, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+  m_PrefabInstance: {fileID: 9193669403119693694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7311274275715608483 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1936728894655250653, guid: f78592cc83d947d43801d8c62fc43a91, type: 3}
+  m_PrefabInstance: {fileID: 9193669403119693694}
   m_PrefabAsset: {fileID: 0}

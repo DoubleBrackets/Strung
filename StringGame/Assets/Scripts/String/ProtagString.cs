@@ -31,7 +31,7 @@ namespace String
         [Header("Stats")]
 
         [SerializeField]
-        private float maxDistance;
+        private float deadZoneDistance;
 
         [Header("Collision")]
 
@@ -74,7 +74,7 @@ namespace String
             }
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(midpoint, maxDistance / 2);
+            Gizmos.DrawWireSphere(midpoint, deadZoneDistance / 2);
         }
 
         private void UpdateStringVisuals(Vector2 p1, Vector2 p2)
@@ -92,6 +92,9 @@ namespace String
         {
             Vector2 direction = (p2 - p1).normalized;
             float distance = Vector2.Distance(p1, p2);
+            p1 += direction * deadZoneDistance;
+            distance -= deadZoneDistance * 2f;
+
             RaycastHit2D[] hits = Physics2D.RaycastAll(p1, direction, distance, collisionLayer);
 
             foreach (RaycastHit2D hit in hits)

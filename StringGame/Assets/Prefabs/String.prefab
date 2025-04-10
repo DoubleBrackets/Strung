@@ -172,7 +172,7 @@ MonoBehaviour:
   lineRendererA: {fileID: 993071439988010030}
   lineRendererB: {fileID: 6721018995965912393}
   centerPoint: {fileID: 7192083090890316635}
-  maxDistance: 5
+  deadZoneDistance: 0.5
   collisionLayer:
     serializedVersion: 2
     m_Bits: 4294967295
