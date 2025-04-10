@@ -254,26 +254,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.m_ColorSpace
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9206662650214390922, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
       propertyPath: m_Name
       value: LineRendererA
@@ -339,26 +319,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1331203326780604065, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646282680305774290, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
-      propertyPath: m_Parameters.colorGradient.m_ColorSpace
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9206662650214390922, guid: f78742afd56fd3e4e9721cb1ceabc7b1, type: 3}
