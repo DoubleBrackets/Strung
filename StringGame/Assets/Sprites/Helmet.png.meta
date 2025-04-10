@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7fef4e514940b7a4391e79809ab5b6d7
+guid: d32f95d596c51154c92b5fe402254689
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7597173527354241848
-    second: checker-map_tho_0
+      213: 309628545801974608
+    second: Helmet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: checker-map_tho_0
+      name: Helmet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 4096
+        x: 2001
+        y: 1644
+        width: 184
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cc8c0dadea619690800000000000000
-      internalID: -7597173527354241848
+      spriteID: 053f8dc95850c4400800000000000000
+      internalID: 309628545801974608
       vertices: []
       indices: 
       edges: []
