@@ -8,9 +8,11 @@ public class RumbleSO : ScriptableObject
     public AnimationCurve HighCurve;
     public AnimationCurve LowCurve;
 
+    [Range(0, 1)]
     [FormerlySerializedAs("HighStrength")]
     public float HighFreq;
 
+    [Range(0, 1)]
     [FormerlySerializedAs("LowStrength")]
     public float LowFreq;
 

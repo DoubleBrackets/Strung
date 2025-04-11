@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa363777f2ebe84d8393f85df86a37e, type: 3}
   m_Name: Rumble
   m_EditorClassIdentifier: 
-  Duration: 0.6
+  Duration: 0.5
   HighCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0.004825592
       value: 0.99694824
-      inSlope: -1.0095865
-      outSlope: -1.0095865
-      tangentMode: 34
+      inSlope: -0.027190913
+      outSlope: -0.027190913
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0.38743448
     - serializedVersion: 3
       time: 1
       value: -0.007766366
-      inSlope: -1.0095865
-      outSlope: -1.0095865
-      tangentMode: 34
+      inSlope: -2.2255535
+      outSlope: -2.2255535
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.057591774
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -43,23 +43,23 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.004825592
       value: 0.99694824
-      inSlope: -1.0095865
-      outSlope: -1.0095865
-      tangentMode: 34
+      inSlope: -0.027190913
+      outSlope: -0.027190913
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0.38743448
     - serializedVersion: 3
       time: 1
       value: -0.007766366
-      inSlope: -1.0095865
-      outSlope: -1.0095865
-      tangentMode: 34
+      inSlope: -2.2255535
+      outSlope: -2.2255535
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.057591774
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  HighFreq: 20
-  LowFreq: 70
+  HighFreq: 1
+  LowFreq: 1

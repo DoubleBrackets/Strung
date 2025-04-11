@@ -385,7 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   protagA: {fileID: 1454937631}
   protagB: {fileID: 1477302789}
-  spawnRadiusRange: {x: 1.5, y: 18}
+  spawnRadiusRange: {x: 2.13, y: 20}
   spawnIntervalRange: {x: 1, y: 1.5}
   minRadius: 4
   enemyPrefab: {fileID: 3111258219479915706, guid: 23f84a43b9ddd0049973eedc4887a68e, type: 3}
